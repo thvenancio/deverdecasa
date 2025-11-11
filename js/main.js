@@ -137,7 +137,7 @@ function showQuestion() {
   elements.question.textContent = current.question;
   elements.options.innerHTML = '';
 
-  const layout = getOptionLayout(current, currentIndex);
+  const layout = getOptionLayout(current);
   state.optionLayouts[currentIndex] = layout;
 
   layout.options.forEach((optionText, index) => {
@@ -345,11 +345,8 @@ async function fetchJSON(path) {
   return response.json();
 }
 
-function getOptionLayout(question, questionIndex) {
+function getOptionLayout(question) {
   const totalOptions = question.options.length;
-  const attemptOffset = totalOptions
-    ? ((state.attemptNumber + questionIndex) % totalOptions + totalOptions) % totalOptions
-    : 0;
   if (totalOptions === 0) {
     return {
       options: [],
@@ -357,6 +354,7 @@ function getOptionLayout(question, questionIndex) {
       explanation: question.explanation,
     };
   }
+
   const correctOriginalIndex = Number(question.answerIndex);
 
   const options = question.options.map((optionText, originalIndex) => ({
@@ -364,27 +362,38 @@ function getOptionLayout(question, questionIndex) {
     isCorrect: originalIndex === correctOriginalIndex,
   }));
 
-  const correctOption = options.find((option) => option.isCorrect) ?? options[0];
-  const incorrectOptions = options.filter((option) => option !== correctOption);
-
-  const orderedOptions = [];
-  let incorrectCursor = 0;
-
-  for (let i = 0; i < totalOptions; i += 1) {
-    if (i === attemptOffset) {
-      orderedOptions.push(correctOption);
-    } else {
-      const nextOption = incorrectOptions[incorrectCursor] ?? correctOption;
-      orderedOptions.push(nextOption);
-      if (incorrectCursor < incorrectOptions.length) {
-        incorrectCursor += 1;
-      }
-    }
-  }
+  const shuffledOptions = shuffleArray(options);
+  const correctIndex = Math.max(
+    0,
+    shuffledOptions.findIndex((option) => option.isCorrect),
+  );
 
   return {
-    options: orderedOptions.map((option) => option.optionText),
-    correctIndex: Math.min(attemptOffset, totalOptions - 1),
+    options: shuffledOptions.map((option) => option.optionText),
+    correctIndex,
     explanation: question.explanation,
   };
+}
+
+function shuffleArray(array) {
+  const result = array.slice();
+  for (let i = result.length - 1; i > 0; i -= 1) {
+    const j = getRandomInt(i + 1);
+    [result[i], result[j]] = [result[j], result[i]];
+  }
+  return result;
+}
+
+function getRandomInt(max) {
+  if (max <= 0) {
+    return 0;
+  }
+
+  if (window.crypto?.getRandomValues) {
+    const array = new Uint32Array(1);
+    window.crypto.getRandomValues(array);
+    return array[0] % max;
+  }
+
+  return Math.floor(Math.random() * max);
 }
