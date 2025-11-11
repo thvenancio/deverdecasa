@@ -1,0 +1,646 @@
+{
+  "id": "historia-brasil-4ano",
+  "title": "História do Brasil – Quiz estilo Duolingo",
+  "badge": "4º ano",
+  "topics": "Conteúdo: engenhos, Brasil Holandês, bandeirantes, gado, ciclo do ouro, Conjuração, Revolução Francesa e Napoleão.",
+  "questions": [
+    {
+      "question": "A cana-de-açúcar tem origem em qual região do mundo?",
+      "options": [
+        "Nova Guiné (Oceania)",
+        "Península Ibérica",
+        "África do Norte",
+        "América Central"
+      ],
+      "answerIndex": 0,
+      "explanation": "A cana surgiu na Nova Guiné e foi difundida para Índia, China, Pérsia e Síria antes de chegar à Europa."
+    },
+    {
+      "question": "Quem ensinou os portugueses a cultivar a cana e produzir açúcar?",
+      "options": [
+        "Povos do Oriente",
+        "Espanhóis",
+        "Indígenas brasileiros",
+        "Vikings"
+      ],
+      "answerIndex": 0,
+      "explanation": "Os povos do Oriente já dominavam o cultivo; os portugueses aprenderam com eles."
+    },
+    {
+      "question": "Como se chamava a propriedade onde se plantava cana e produzia açúcar?",
+      "options": [
+        "Engenho de açúcar",
+        "Fazenda de mandioca",
+        "Sesmeiro",
+        "Capitania"
+      ],
+      "answerIndex": 0,
+      "explanation": "Engenho é o conjunto produtivo: canaviais, moendas, casas e pessoas."
+    },
+    {
+      "question": "O primeiro engenho do Brasil foi instalado em:",
+      "options": [
+        "São Vicente (SP)",
+        "Salvador (BA)",
+        "Recife (PE)",
+        "Rio de Janeiro (RJ)"
+      ],
+      "answerIndex": 0,
+      "explanation": "Martim Afonso de Sousa instalou o primeiro engenho na capitania de São Vicente."
+    },
+    {
+      "question": "As capitanias que mais se destacaram na produção de açúcar foram:",
+      "options": [
+        "Pernambuco e Bahia",
+        "Santa Catarina e Paraná",
+        "Acre e Amapá",
+        "Goiás e Tocantins"
+      ],
+      "answerIndex": 0,
+      "explanation": "Pernambuco e Bahia se destacaram em qualidade e quantidade."
+    },
+    {
+      "question": "Por que muitos donatários pediam empréstimos a comerciantes holandeses?",
+      "options": [
+        "Porque montar um engenho custava caro",
+        "Porque o açúcar não tinha valor",
+        "Porque era proibido plantar cana",
+        "Porque não havia mão de obra"
+      ],
+      "answerIndex": 0,
+      "explanation": "A estrutura era caríssima; os holandeses financiavam e comercializavam o açúcar na Europa."
+    },
+    {
+      "question": "O território do Brasil foi dividido em grandes áreas entregues a donatários. Como se chamavam?",
+      "options": [
+        "Capitanias hereditárias",
+        "Províncias Unidas",
+        "Capitais",
+        "Estados"
+      ],
+      "answerIndex": 0,
+      "explanation": "As capitanias eram administradas pelos donatários."
+    },
+    {
+      "question": "Qual condição natural NÃO favorecia o cultivo da cana no Brasil?",
+      "options": [
+        "Clima frio de montanha",
+        "Solos férteis",
+        "Regime de chuvas",
+        "Grande extensão territorial"
+      ],
+      "answerIndex": 0,
+      "explanation": "Clima frio de montanha não favorece a cana; o Brasil tinha clima e solos favoráveis."
+    },
+    {
+      "question": "O açúcar era tão valioso que podia ser:",
+      "options": [
+        "Presente entre reis e herança",
+        "Usado como moeda somente no Brasil",
+        "Proibido em Portugal",
+        "Descartado nos navios"
+      ],
+      "answerIndex": 0,
+      "explanation": "Fontes registram o açúcar como presente e até herança."
+    },
+    {
+      "question": "Quem instalou o primeiro engenho no Brasil?",
+      "options": [
+        "Martim Afonso de Sousa",
+        "Maurício de Nassau",
+        "Tiradentes",
+        "Dom Sebastião"
+      ],
+      "answerIndex": 0,
+      "explanation": "Martim Afonso foi o responsável em São Vicente."
+    },
+    {
+      "question": "Engenho de açúcar envolve:",
+      "options": [
+        "Terra, instalações, trabalhadores e moendas",
+        "Apenas o canavial",
+        "Somente a casa-grande",
+        "Apenas comércio com a Europa"
+      ],
+      "answerIndex": 0,
+      "explanation": "É um complexo produtivo completo."
+    },
+    {
+      "question": "Os portugueses iniciaram o cultivo de cana em ilhas do Atlântico, como:",
+      "options": [
+        "Madeira, Açores e Cabo Verde",
+        "Ilhas Galápagos",
+        "Bermudas",
+        "Havaí"
+      ],
+      "answerIndex": 0,
+      "explanation": "Essas ilhas foram etapas antes do Brasil."
+    },
+    {
+      "question": "Para defender a posse do território e gerar riqueza, os portugueses apostaram na:",
+      "options": [
+        "Produção de açúcar",
+        "Extração de sal",
+        "Plantação de trigo",
+        "Pecuária apenas"
+      ],
+      "answerIndex": 0,
+      "explanation": "O açúcar virou a grande aposta até o ciclo do ouro."
+    },
+    {
+      "question": "Qual era a função dos engenhos próximos aos portos?",
+      "options": [
+        "Facilitar o escoamento do açúcar para a Europa",
+        "Evitar contato com rios",
+        "Esconder a produção",
+        "Produzir apenas para consumo local"
+      ],
+      "answerIndex": 0,
+      "explanation": "Proximidade reduzia custo e tempo de transporte."
+    },
+    {
+      "question": "Quem eram os principais financiadores e comerciantes do açúcar na Europa por muito tempo?",
+      "options": [
+        "Holandeses",
+        "Italianos",
+        "Chineses",
+        "Suecos"
+      ],
+      "answerIndex": 0,
+      "explanation": "Holandeses financiaram e distribuíram o açúcar."
+    },
+    {
+      "question": "A União Ibérica uniu quais reinos sob o mesmo rei?",
+      "options": [
+        "Portugal e Espanha",
+        "Holanda e Inglaterra",
+        "França e Itália",
+        "Portugal e Inglaterra"
+      ],
+      "answerIndex": 0,
+      "explanation": "Filipe II, rei da Espanha, tornou-se também rei de Portugal (1580–1640)."
+    },
+    {
+      "question": "A União Ibérica começou após a morte de:",
+      "options": [
+        "Dom Sebastião e depois Dom Henrique",
+        "Dom Pedro I",
+        "Tiradentes",
+        "Maurício de Nassau"
+      ],
+      "answerIndex": 0,
+      "explanation": "Ambos morreram sem herdeiros, abrindo disputa pelo trono."
+    },
+    {
+      "question": "As províncias que se rebelaram e formaram as Províncias Unidas eram:",
+      "options": [
+        "Países Baixos (Holanda)",
+        "Itália",
+        "Rússia",
+        "Suíça"
+      ],
+      "answerIndex": 0,
+      "explanation": "Região dos atuais Países Baixos, com a Holanda em destaque."
+    },
+    {
+      "question": "Por que a Holanda invadiu o Brasil no século XVII?",
+      "options": [
+        "Para controlar o lucrativo negócio do açúcar",
+        "Para evangelizar povos indígenas",
+        "Para procurar ouro em Minas",
+        "Para fugir do frio europeu"
+      ],
+      "answerIndex": 0,
+      "explanation": "O açúcar era o grande negócio; a Holanda tinha sido impedida de comerciar."
+    },
+    {
+      "question": "Em 1624, os holandeses invadiram primeiro:",
+      "options": [
+        "Salvador (BA)",
+        "São Vicente (SP)",
+        "Rio de Janeiro (RJ)",
+        "Belém (PA)"
+      ],
+      "answerIndex": 0,
+      "explanation": "A esquadra atacou Salvador, mas foi repelida depois."
+    },
+    {
+      "question": "Em 1630, conquistaram a região mais próspera do Brasil:",
+      "options": [
+        "Pernambuco",
+        "Amazonas",
+        "Goiás",
+        "Paraná"
+      ],
+      "answerIndex": 0,
+      "explanation": "A partir de 1630 consolidaram o chamado 'Brasil Holandês'."
+    },
+    {
+      "question": "A empresa que organizou a invasão foi a:",
+      "options": [
+        "Companhia das Índias Ocidentais",
+        "Companhia de Jesus",
+        "Companhia do Comércio do Sul",
+        "Companhia do Mate"
+      ],
+      "answerIndex": 0,
+      "explanation": "Era uma grande companhia mercantil e militar holandesa."
+    },
+    {
+      "question": "Quem administrou o Brasil Holandês e modernizou Recife?",
+      "options": [
+        "Maurício de Nassau",
+        "Martim Afonso",
+        "Dom João VI",
+        "Pombal"
+      ],
+      "answerIndex": 0,
+      "explanation": "Nassau trouxe obras, cientistas e artistas."
+    },
+    {
+      "question": "Obra marcante do período de Nassau:",
+      "options": [
+        "Palácio de Friburgo",
+        "Teatro Amazonas",
+        "Palácio de São Cristóvão",
+        "Palácio da Alvorada"
+      ],
+      "answerIndex": 0,
+      "explanation": "Residência oficial de Nassau em Recife."
+    },
+    {
+      "question": "Qual cidade virou capital do Brasil Holandês?",
+      "options": [
+        "Recife",
+        "Olinda",
+        "Salvador",
+        "Natal"
+      ],
+      "answerIndex": 0,
+      "explanation": "Recife foi estruturada e elevou-se com canais, pontes e diques."
+    },
+    {
+      "question": "Nassau também criou em Recife:",
+      "options": [
+        "Jardim botânico, zoológico e observatório",
+        "Minas de carvão",
+        "Fábricas de automóveis",
+        "Universidade de Coimbra"
+      ],
+      "answerIndex": 0,
+      "explanation": "Mostra o apreço dele pelas ciências."
+    },
+    {
+      "question": "O termo 'Brasil Holandês' refere-se:",
+      "options": [
+        "À parte do Nordeste sob domínio holandês (1630–1654)",
+        "A todo o Brasil sob a Holanda",
+        "À Amazônia colonizada por holandeses no século XIX",
+        "Ao período republicano"
+      ],
+      "answerIndex": 0,
+      "explanation": "Especialmente Pernambuco e áreas vizinhas."
+    },
+    {
+      "question": "Após 1637, grande parte do litoral nordestino estava:",
+      "options": [
+        "Sob domínio da Holanda",
+        "Sob domínio francês",
+        "Despovoado",
+        "Independente"
+      ],
+      "answerIndex": 0,
+      "explanation": "Os holandeses expandiram após conquistar Pernambuco."
+    },
+    {
+      "question": "Os reforços que impediram o sucesso da invasão de 1624 foram enviados por:",
+      "options": [
+        "Coroa Ibérica",
+        "França",
+        "Inglaterra",
+        "Veneza"
+      ],
+      "answerIndex": 0,
+      "explanation": "Portugal e Espanha estavam unidos (Coroa Ibérica)."
+    },
+    {
+      "question": "Os holandeses atuavam no Brasil principalmente como:",
+      "options": [
+        "Comerciantes e financiadores do açúcar",
+        "Exploradores de petróleo",
+        "Caçadores de baleia",
+        "Fabricantes de armas"
+      ],
+      "answerIndex": 0,
+      "explanation": "Controlavam crédito e distribuição do açúcar na Europa."
+    },
+    {
+      "question": "Por muito tempo a ocupação do Brasil ocorreu principalmente:",
+      "options": [
+        "Perto do litoral",
+        "No interior amazônico",
+        "No extremo sul",
+        "No centro-oeste"
+      ],
+      "answerIndex": 0,
+      "explanation": "Engenhos e portos estavam no litoral, facilitando o escoamento."
+    },
+    {
+      "question": "A criação de gado avançou para:",
+      "options": [
+        "O interior do território",
+        "Apenas o litoral",
+        "Ilhas oceânicas",
+        "Apenas cidades"
+      ],
+      "answerIndex": 0,
+      "explanation": "Havia pouco espaço nos engenhos; o gado foi para o interior."
+    },
+    {
+      "question": "Os bovinos chegaram ao Brasil vindos de:",
+      "options": [
+        "Cabo Verde",
+        "Índia",
+        "México",
+        "Japão"
+      ],
+      "answerIndex": 0,
+      "explanation": "Os primeiros bois vieram de Cabo Verde."
+    },
+    {
+      "question": "Além de alimento, o gado servia para:",
+      "options": [
+        "Transporte e força nas moendas",
+        "Produzir açúcar",
+        "Navegar barcos",
+        "Fazer pólvora"
+      ],
+      "answerIndex": 0,
+      "explanation": "Bovinos moviam rodas d’água e transportavam cargas/pessoas."
+    },
+    {
+      "question": "Quem conduzia o gado por longas distâncias eram os:",
+      "options": [
+        "Tropeiros",
+        "Bandeirantes",
+        "Sesmeiros",
+        "Corsários"
+      ],
+      "answerIndex": 0,
+      "explanation": "Tropeiros abasteciam várias regiões e fundaram cidades."
+    },
+    {
+      "question": "Cidades ligadas às rotas de tropeiros incluem:",
+      "options": [
+        "Vacaria, Lages, Castro e Sorocaba",
+        "Manaus, Belém, Macapá",
+        "Porto Seguro, Ilhéus, Aracaju",
+        "Fortaleza, Teresina, São Luís"
+      ],
+      "answerIndex": 0,
+      "explanation": "Surgiram em pontos de parada e comércio do gado."
+    },
+    {
+      "question": "Os habitantes de São Vicente que faziam expedições ao interior eram chamados:",
+      "options": [
+        "Paulistas / Bandeirantes",
+        "Gaúchos",
+        "Garimpeiros",
+        "Bucaneiros"
+      ],
+      "answerIndex": 0,
+      "explanation": "Paulistas organizavam as 'bandeiras'."
+    },
+    {
+      "question": "As 'bandeiras' usavam muito os rios, como:",
+      "options": [
+        "Tietê e afluentes",
+        "São Francisco e Tocantins apenas",
+        "Amazonas apenas",
+        "Paraná apenas"
+      ],
+      "answerIndex": 0,
+      "explanation": "Rios facilitavam a entrada para o interior."
+    },
+    {
+      "question": "A composição típica das bandeiras incluía:",
+      "options": [
+        "Europeus, indígenas e seus descendentes",
+        "Somente portugueses nobres",
+        "Apenas militares espanhóis",
+        "Missionários franceses"
+      ],
+      "answerIndex": 0,
+      "explanation": "Era um grupo misto, com diferentes origens."
+    },
+    {
+      "question": "As bandeiras contribuíram para:",
+      "options": [
+        "Ampliar o território além de Tordesilhas",
+        "Dividir o Brasil entre França e Inglaterra",
+        "Encerrar a produção de açúcar",
+        "Proibir a criação de gado"
+      ],
+      "answerIndex": 0,
+      "explanation": "Exploraram áreas a oeste, ignorando Tordesilhas."
+    },
+    {
+      "question": "Tratado que dividia as terras entre Portugal e Espanha em 1494:",
+      "options": [
+        "Tratado de Tordesilhas",
+        "Tratado de Versalhes",
+        "Tratado de Petrópolis",
+        "Tratado de Madrid (1750)"
+      ],
+      "answerIndex": 0,
+      "explanation": "As bandeiras frequentemente ignoraram seus limites."
+    },
+    {
+      "question": "Objetivo principal das primeiras bandeiras paulistas:",
+      "options": [
+        "Encontrar metais preciosos",
+        "Dominar o comércio de escravos africanos no Atlântico",
+        "Cultivar café",
+        "Fundar universidades"
+      ],
+      "answerIndex": 0,
+      "explanation": "Buscavam ouro e pedras; só depois acharam grandes jazidas."
+    },
+    {
+      "question": "O 'Monumento às Bandeiras', em SP, foi criado por:",
+      "options": [
+        "Victor Brecheret",
+        "Aleijadinho",
+        "Debret",
+        "Tarsila do Amaral"
+      ],
+      "answerIndex": 0,
+      "explanation": "Escultura icônica em frente ao Ibirapuera."
+    },
+    {
+      "question": "A descoberta de ouro em grande escala aconteceu:",
+      "options": [
+        "Após cerca de um século de expedições",
+        "Na chegada de Cabral",
+        "No período do Brasil Holandês",
+        "Apenas no Império"
+      ],
+      "answerIndex": 0,
+      "explanation": "Depois de longa busca, no fim do séc. XVII."
+    },
+    {
+      "question": "A principal nova riqueza do Brasil no fim do séc. XVII foi:",
+      "options": [
+        "Ouro",
+        "Café",
+        "Borracha",
+        "Algodão"
+      ],
+      "answerIndex": 0,
+      "explanation": "O ciclo do ouro substituiu o auge do açúcar."
+    },
+    {
+      "question": "O principal imposto nas regiões mineradoras era o:",
+      "options": [
+        "Quinto (20% do ouro)",
+        "Dízimo (10%)",
+        "Capitação (50%)",
+        "Sisa (2%)"
+      ],
+      "answerIndex": 0,
+      "explanation": "O quinto recolhia 1/5 de todo o ouro encontrado."
+    },
+    {
+      "question": "Para controlar a mineração, a Coroa portuguesa:",
+      "options": [
+        "Criou postos e enviou ouvidores",
+        "Aboliu os impostos",
+        "Mudou a capital para Salvador",
+        "Proibiu o uso de estradas"
+      ],
+      "answerIndex": 0,
+      "explanation": "Ouvidores cobravam e vigiavam entrada/saída de ouro."
+    },
+    {
+      "question": "A capital foi transferida de Salvador para o Rio de Janeiro porque:",
+      "options": [
+        "Ficava mais perto das minas",
+        "Tinha praias mais bonitas",
+        "Era mais antiga",
+        "Era sede da Igreja"
+      ],
+      "answerIndex": 0,
+      "explanation": "Logística e fiscalização do ouro."
+    },
+    {
+      "question": "Quando o ouro diminuiu e as metas não eram atingidas, poderia ocorrer:",
+      "options": [
+        "Confisco de bens (derrama)",
+        "Anistia total",
+        "Redução automática de impostos",
+        "Mudança para Lisboa"
+      ],
+      "answerIndex": 0,
+      "explanation": "A derrama permitia confiscar bens para cumprir a meta."
+    },
+    {
+      "question": "Movimento que buscou a independência de Minas inspirado nos EUA:",
+      "options": [
+        "Conjuração Mineira",
+        "Revolução Praieira",
+        "Sabinada",
+        "Balaiada"
+      ],
+      "answerIndex": 0,
+      "explanation": "Planejou proclamar a independência em Vila Rica."
+    },
+    {
+      "question": "Líder mais lembrado da Conjuração Mineira:",
+      "options": [
+        "Tiradentes",
+        "Dom Pedro I",
+        "José Bonifácio",
+        "Maurício de Nassau"
+      ],
+      "answerIndex": 0,
+      "explanation": "Joaquim José da Silva Xavier, o Tiradentes."
+    },
+    {
+      "question": "Quem traiu o grupo em troca de perdão de dívidas?",
+      "options": [
+        "Joaquim Silvério dos Reis",
+        "Dom João VI",
+        "Pombal",
+        "Bonifácio"
+      ],
+      "answerIndex": 0,
+      "explanation": "A delação levou às prisões; Tiradentes foi executado."
+    },
+    {
+      "question": "A Revolução Francesa começou em:",
+      "options": [
+        "1789",
+        "1808",
+        "1500",
+        "1654"
+      ],
+      "answerIndex": 0,
+      "explanation": "Derrubou a monarquia absolutista na França."
+    },
+    {
+      "question": "Um ideal associado à Revolução Francesa:",
+      "options": [
+        "Liberdade, igualdade e fraternidade",
+        "Colonialismo sem impostos",
+        "Monarquia absoluta",
+        "Feudalismo"
+      ],
+      "answerIndex": 0,
+      "explanation": "Inspirou muitos movimentos nas Américas."
+    },
+    {
+      "question": "Quem se destacou como general e depois imperador da França?",
+      "options": [
+        "Napoleão Bonaparte",
+        "Luís XIV",
+        "Robespierre",
+        "Henrique VIII"
+      ],
+      "answerIndex": 0,
+      "explanation": "Napoleão expandiu o domínio francês pela Europa."
+    },
+    {
+      "question": "Grande obstáculo aos planos de Napoleão na Europa:",
+      "options": [
+        "Inglaterra",
+        "Portugal",
+        "Suécia",
+        "Sardenha"
+      ],
+      "answerIndex": 0,
+      "explanation": "A Inglaterra resistia e liderava coalizões contra a França."
+    },
+    {
+      "question": "Napoleão ameaçou invadir países que:",
+      "options": [
+        "Comerciassem com a Inglaterra",
+        "Exportassem café",
+        "Usassem ouro brasileiro",
+        "Falassem português"
+      ],
+      "answerIndex": 0,
+      "explanation": "Bloqueio Continental visava isolar os ingleses."
+    },
+    {
+      "question": "Portugal recusou romper com a Inglaterra; consequência:",
+      "options": [
+        "Fuga da corte portuguesa para o Brasil (1807)",
+        "Independência imediata do Brasil",
+        "Domínio holandês em Pernambuco",
+        "Fim dos engenhos"
+      ],
+      "answerIndex": 0,
+      "explanation": "A corte transferiu-se para o Rio, mudando o status do Brasil."
+    }
+  ]
+}
