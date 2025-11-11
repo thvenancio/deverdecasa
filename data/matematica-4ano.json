@@ -1,0 +1,339 @@
+{
+  "id": "matematica-4ano-geometria-e-numeros-decimais",
+  "title": "Matemática – Quiz estilo Duolingo",
+  "badge": "4º ano",
+  "topics": "Conteúdo: figuras geométricas planas e espaciais, simetria, temperatura, gráficos de colunas, números decimais, sistema monetário e princípio aditivo da igualdade.",
+  "questions": [
+    {
+      "question": "Quantos lados tem um quadrilátero?",
+      "options": ["4", "5", "6", "3"],
+      "answerIndex": 0,
+      "explanation": "Quadrilátero vem de 'quatro lados'."
+    },
+    {
+      "question": "Como se chama a figura plana com 5 lados?",
+      "options": ["Pentágono", "Hexágono", "Heptágono", "Octógono"],
+      "answerIndex": 0,
+      "explanation": "Pentágono tem cinco lados."
+    },
+    {
+      "question": "Uma figura de 6 lados recebe qual nome?",
+      "options": ["Hexágono", "Pentágono", "Heptágono", "Decágono"],
+      "answerIndex": 0,
+      "explanation": "Hexa significa seis, por isso hexágono tem seis lados."
+    },
+    {
+      "question": "Qual é o nome da figura com 7 lados?",
+      "options": ["Heptágono", "Eneágono", "Hexágono", "Octógono"],
+      "answerIndex": 0,
+      "explanation": "Heptágono tem sete lados."
+    },
+    {
+      "question": "Um octógono tem quantos lados?",
+      "options": ["8", "6", "7", "9"],
+      "answerIndex": 0,
+      "explanation": "Octo significa oito."
+    },
+    {
+      "question": "A figura com 9 lados chama-se:",
+      "options": ["Eneágono", "Decágono", "Hexágono", "Heptágono"],
+      "answerIndex": 0,
+      "explanation": "Enea vem do grego para nove."
+    },
+    {
+      "question": "Qual figura plana tem 10 lados?",
+      "options": ["Decágono", "Undecágono", "Dodecágono", "Octógono"],
+      "answerIndex": 0,
+      "explanation": "Deca significa dez."
+    },
+    {
+      "question": "Uma figura com 11 lados é chamada de:",
+      "options": ["Undecágono", "Decágono", "Dodecágono", "Eneágono"],
+      "answerIndex": 0,
+      "explanation": "Undeca representa onze lados."
+    },
+    {
+      "question": "Quantos lados tem um dodecágono?",
+      "options": ["12", "10", "8", "11"],
+      "answerIndex": 0,
+      "explanation": "Dodeca significa doze."
+    },
+    {
+      "question": "O prisma pentagonal tem quantas faces?",
+      "options": ["7", "6", "8", "10"],
+      "answerIndex": 0,
+      "explanation": "Possui duas bases pentagonais e cinco faces laterais."
+    },
+    {
+      "question": "A pirâmide pentagonal tem quantas faces?",
+      "options": ["6", "7", "5", "8"],
+      "answerIndex": 0,
+      "explanation": "Uma base pentagonal e cinco faces triangulares."
+    },
+    {
+      "question": "Por que o prisma tem mais faces que a pirâmide?",
+      "options": ["Porque tem duas bases", "Porque é menor", "Porque tem lados curvos", "Porque é triangular"],
+      "answerIndex": 0,
+      "explanation": "O prisma tem duas bases; a pirâmide, apenas uma."
+    },
+    {
+      "question": "O que é simetria de reflexão?",
+      "options": [
+        "Quando uma figura é igual dos dois lados de um eixo",
+        "Quando a figura gira em torno de um ponto",
+        "Quando é colorida igualmente",
+        "Quando tem vários lados"
+      ],
+      "answerIndex": 0,
+      "explanation": "É a semelhança entre duas partes como se fossem reflexo em um espelho."
+    },
+    {
+      "question": "O eixo de simetria é:",
+      "options": [
+        "A linha que divide a figura em duas partes iguais",
+        "A borda da figura",
+        "O centro de rotação",
+        "O ponto mais alto"
+      ],
+      "answerIndex": 0,
+      "explanation": "O eixo de simetria é a linha imaginária que divide a figura em partes iguais."
+    },
+    {
+      "question": "Na simetria de reflexão, as partes estão:",
+      "options": [
+        "À mesma distância do eixo",
+        "De tamanhos diferentes",
+        "De cores diferentes",
+        "Em sentidos contrários"
+      ],
+      "answerIndex": 0,
+      "explanation": "As partes simétricas estão sempre à mesma distância do eixo."
+    },
+    {
+      "question": "Qual instrumento usamos para medir temperatura?",
+      "options": ["Termômetro", "Régua", "Bússola", "Barômetro"],
+      "answerIndex": 0,
+      "explanation": "O termômetro mede a temperatura de um ambiente ou corpo."
+    },
+    {
+      "question": "A unidade de medida de temperatura usada no Brasil é:",
+      "options": ["Grau Celsius", "Kelvin", "Grau Fahrenheit", "Joule"],
+      "answerIndex": 0,
+      "explanation": "Usamos o grau Celsius (°C)."
+    },
+    {
+      "question": "Qual a temperatura aproximada do corpo humano?",
+      "options": ["36°C a 37°C", "0°C", "100°C", "240°C"],
+      "answerIndex": 0,
+      "explanation": "A temperatura normal do corpo humano varia entre 36°C e 37°C."
+    },
+    {
+      "question": "A água ferve aproximadamente a:",
+      "options": ["100°C", "50°C", "0°C", "200°C"],
+      "answerIndex": 0,
+      "explanation": "A ebulição da água ocorre a 100°C ao nível do mar."
+    },
+    {
+      "question": "O cubo de gelo tem temperatura próxima de:",
+      "options": ["0°C", "36°C", "10°C", "20°C"],
+      "answerIndex": 0,
+      "explanation": "O gelo está próximo de 0°C, ponto de congelamento da água."
+    },
+    {
+      "question": "No gráfico de colunas duplas, cada par de colunas mostra:",
+      "options": [
+        "Temperatura mínima e máxima",
+        "Altura e peso",
+        "Dias e meses",
+        "Cidades e estados"
+      ],
+      "answerIndex": 0,
+      "explanation": "Cada par representa duas informações: temperatura mínima e máxima."
+    },
+    {
+      "question": "A coluna azul no gráfico representa:",
+      "options": [
+        "Temperatura mínima",
+        "Temperatura máxima",
+        "Diferença de temperatura",
+        "Média anual"
+      ],
+      "answerIndex": 0,
+      "explanation": "No exemplo, azul representa a temperatura mínima."
+    },
+    {
+      "question": "A coluna vermelha no gráfico representa:",
+      "options": [
+        "Temperatura máxima",
+        "Temperatura mínima",
+        "Variação",
+        "Umidade"
+      ],
+      "answerIndex": 0,
+      "explanation": "Vermelho representa a temperatura máxima."
+    },
+    {
+      "question": "Cuiabá apresentou temperatura mais alta que:",
+      "options": ["Belém", "Vitória", "Porto Alegre", "Fortaleza"],
+      "answerIndex": 0,
+      "explanation": "Cuiabá teve a maior temperatura entre as cidades apresentadas."
+    },
+    {
+      "question": "A diferença entre 36°C e 18°C é de:",
+      "options": ["18°C", "12°C", "20°C", "22°C"],
+      "answerIndex": 0,
+      "explanation": "36 - 18 = 18°C de diferença."
+    },
+    {
+      "question": "Em qual cidade a menor temperatura foi registrada?",
+      "options": ["Porto Alegre", "Cuiabá", "Vitória", "Belém"],
+      "answerIndex": 0,
+      "explanation": "Porto Alegre apresentou a menor temperatura."
+    },
+    {
+      "question": "O que devemos fazer para somar números decimais?",
+      "options": [
+        "Alinhar as vírgulas",
+        "Somar tudo sem vírgula",
+        "Trocar vírgula por ponto",
+        "Arredondar"
+      ],
+      "answerIndex": 0,
+      "explanation": "Devemos alinhar as vírgulas para manter as ordens corretas."
+    },
+    {
+      "question": "1,23 + 0,21 é igual a:",
+      "options": ["1,44", "1,24", "1,43", "1,42"],
+      "answerIndex": 0,
+      "explanation": "A soma é 1,44."
+    },
+    {
+      "question": "53,56 − 21 é igual a:",
+      "options": ["32,56", "31,45", "33,56", "32,65"],
+      "answerIndex": 0,
+      "explanation": "Subtraindo 21, temos 32,56."
+    },
+    {
+      "question": "75,40 − 43,28 é igual a:",
+      "options": ["32,12", "33,28", "32,28", "30,12"],
+      "answerIndex": 0,
+      "explanation": "A diferença é 32,12."
+    },
+    {
+      "question": "O real é dividido em quantos centavos?",
+      "options": ["100", "10", "50", "1000"],
+      "answerIndex": 0,
+      "explanation": "1 real corresponde a 100 centavos."
+    },
+    {
+      "question": "R$ 0,01 corresponde a:",
+      "options": ["1 centavo", "10 centavos", "5 centavos", "1 real"],
+      "answerIndex": 0,
+      "explanation": "R$ 0,01 é igual a 1 centavo."
+    },
+    {
+      "question": "R$ 0,10 equivale a:",
+      "options": ["10 centavos", "1 centavo", "50 centavos", "1 real"],
+      "answerIndex": 0,
+      "explanation": "R$ 0,10 corresponde a 10 centavos."
+    },
+    {
+      "question": "Se você tem R$ 4,40 e ganha R$ 1,75, o total é:",
+      "options": ["R$ 6,15", "R$ 5,15", "R$ 6,10", "R$ 6,25"],
+      "answerIndex": 0,
+      "explanation": "4,40 + 1,75 = 6,15."
+    },
+    {
+      "question": "O que é desconto?",
+      "options": [
+        "Redução no preço inicial",
+        "Aumento do preço",
+        "Imposto cobrado",
+        "Troco recebido"
+      ],
+      "answerIndex": 0,
+      "explanation": "Desconto é a redução de valor no preço original."
+    },
+    {
+      "question": "Se um jantar custa R$ 31,20 e o desconto é de R$ 15, o preço final é:",
+      "options": ["R$ 16,20", "R$ 15,20", "R$ 17,10", "R$ 18,00"],
+      "answerIndex": 0,
+      "explanation": "31,20 - 15 = 16,20."
+    },
+    {
+      "question": "Pagando R$ 50,00 por algo de R$ 16,20, o troco será:",
+      "options": ["R$ 33,80", "R$ 34,80", "R$ 35,00", "R$ 32,20"],
+      "answerIndex": 0,
+      "explanation": "50,00 - 16,20 = 33,80."
+    },
+    {
+      "question": "O símbolo do real é:",
+      "options": ["R$", "$", "€", "£"],
+      "answerIndex": 0,
+      "explanation": "O símbolo da moeda brasileira é R$."
+    },
+    {
+      "question": "O princípio aditivo da igualdade diz que:",
+      "options": [
+        "Adicionar ou subtrair o mesmo número mantém a igualdade",
+        "Multiplicar sempre muda a igualdade",
+        "Somar números diferentes mantém a igualdade",
+        "Subtrair números grandes anula a igualdade"
+      ],
+      "answerIndex": 0,
+      "explanation": "A igualdade se mantém se adicionarmos ou subtrairmos o mesmo valor dos dois lados."
+    },
+    {
+      "question": "20 + 20 = 10 + 10 + 10 + 10 representa:",
+      "options": [
+        "Uma igualdade verdadeira",
+        "Uma desigualdade",
+        "Uma multiplicação",
+        "Uma divisão"
+      ],
+      "answerIndex": 0,
+      "explanation": "Ambos os lados são iguais a 40."
+    },
+    {
+      "question": "Se somarmos 6 a um lado e 7 ao outro, a igualdade:",
+      "options": ["Deixa de existir", "Permanece igual", "Se multiplica", "Fica invertida"],
+      "answerIndex": 0,
+      "explanation": "Somar valores diferentes nos dois lados quebra a igualdade."
+    },
+    {
+      "question": "O resultado de 20 + 20 + 6 e 10 + 10 + 10 + 10 + 7 é:",
+      "options": ["46 ≠ 47", "46 = 47", "40 = 40", "47 = 47"],
+      "answerIndex": 0,
+      "explanation": "Não há igualdade, pois 46 é diferente de 47."
+    },
+    {
+      "question": "Multiplicar por 10 significa:",
+      "options": [
+        "Aumentar o número em uma ordem decimal",
+        "Dividir o número por 10",
+        "Tirar a vírgula",
+        "Diminuir dez unidades"
+      ],
+      "answerIndex": 0,
+      "explanation": "Multiplicar por 10 desloca o número uma casa à esquerda."
+    },
+    {
+      "question": "7 notas de R$ 10 equivalem a:",
+      "options": ["R$ 70", "R$ 700", "R$ 17", "R$ 100"],
+      "answerIndex": 0,
+      "explanation": "7 × 10 = 70."
+    },
+    {
+      "question": "5 notas de R$ 100 equivalem a:",
+      "options": ["R$ 500", "R$ 50", "R$ 1000", "R$ 150"],
+      "answerIndex": 0,
+      "explanation": "5 × 100 = 500."
+    },
+    {
+      "question": "7 notas de R$ 10 e 5 notas de R$ 100 somam:",
+      "options": ["R$ 570", "R$ 670", "R$ 750", "R$ 600"],
+      "answerIndex": 0,
+      "explanation": "70 + 500 = 570."
+    }
+  ]
+}
