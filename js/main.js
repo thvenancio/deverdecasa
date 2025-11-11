@@ -6,6 +6,8 @@ const state = {
   currentIndex: 0,
   score: 0,
   answered: false,
+  attemptNumber: -1,
+  optionLayouts: [],
 };
 
 const elements = {
@@ -100,6 +102,8 @@ async function startQuiz(assignment, triggerButton) {
     state.currentIndex = 0;
     state.score = 0;
     state.answered = false;
+    state.attemptNumber += 1;
+    state.optionLayouts = [];
 
     prepareQuizHeader();
     switchView('quiz');
@@ -133,7 +137,10 @@ function showQuestion() {
   elements.question.textContent = current.question;
   elements.options.innerHTML = '';
 
-  current.options.forEach((optionText, index) => {
+  const layout = getOptionLayout(current, currentIndex);
+  state.optionLayouts[currentIndex] = layout;
+
+  layout.options.forEach((optionText, index) => {
     const button = document.createElement('button');
     button.className = 'btn';
     button.type = 'button';
@@ -156,8 +163,8 @@ function handleAnswer(button, index) {
   }
 
   state.answered = true;
-  const current = state.questionSet[state.currentIndex];
-  const correctIndex = Number(current.answerIndex);
+  const layout = state.optionLayouts[state.currentIndex];
+  const correctIndex = layout?.correctIndex ?? 0;
 
   const optionButtons = elements.options.querySelectorAll('button');
   optionButtons.forEach((btn) => {
@@ -167,10 +174,10 @@ function handleAnswer(button, index) {
   if (index === correctIndex) {
     state.score += 1;
     button.classList.add('correct');
-    showFeedback(true, current.explanation);
+    showFeedback(true, layout.explanation);
   } else {
     button.classList.add('wrong');
-    showFeedback(false, current.explanation);
+    showFeedback(false, layout.explanation);
     const correctButton = elements.options.querySelector(`button[data-index="${correctIndex}"]`);
     if (correctButton) {
       correctButton.classList.add('correct');
@@ -215,6 +222,8 @@ function restartQuiz() {
   state.currentIndex = 0;
   state.score = 0;
   state.answered = false;
+  state.attemptNumber += 1;
+  state.optionLayouts = [];
   elements.end.setAttribute('hidden', 'hidden');
   elements.qwrap.removeAttribute('hidden');
   showQuestion();
@@ -334,4 +343,48 @@ async function fetchJSON(path) {
     throw new Error(`Erro ao carregar ${path}: ${response.status}`);
   }
   return response.json();
+}
+
+function getOptionLayout(question, questionIndex) {
+  const totalOptions = question.options.length;
+  const attemptOffset = totalOptions
+    ? ((state.attemptNumber + questionIndex) % totalOptions + totalOptions) % totalOptions
+    : 0;
+  if (totalOptions === 0) {
+    return {
+      options: [],
+      correctIndex: 0,
+      explanation: question.explanation,
+    };
+  }
+  const correctOriginalIndex = Number(question.answerIndex);
+
+  const options = question.options.map((optionText, originalIndex) => ({
+    optionText,
+    isCorrect: originalIndex === correctOriginalIndex,
+  }));
+
+  const correctOption = options.find((option) => option.isCorrect) ?? options[0];
+  const incorrectOptions = options.filter((option) => option !== correctOption);
+
+  const orderedOptions = [];
+  let incorrectCursor = 0;
+
+  for (let i = 0; i < totalOptions; i += 1) {
+    if (i === attemptOffset) {
+      orderedOptions.push(correctOption);
+    } else {
+      const nextOption = incorrectOptions[incorrectCursor] ?? correctOption;
+      orderedOptions.push(nextOption);
+      if (incorrectCursor < incorrectOptions.length) {
+        incorrectCursor += 1;
+      }
+    }
+  }
+
+  return {
+    options: orderedOptions.map((option) => option.optionText),
+    correctIndex: Math.min(attemptOffset, totalOptions - 1),
+    explanation: question.explanation,
+  };
 }
