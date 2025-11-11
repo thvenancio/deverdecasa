@@ -1,0 +1,272 @@
+{
+  "id": "lingua-portuguesa-4ano",
+  "title": "Língua Portuguesa – Quiz estilo Duolingo",
+  "badge": "4º ano",
+  "topics": "Conteúdo: verbos, modos verbais, preposições, formação de substantivos, frases interrogativas e injuntivas, textos técnicos e comparações.",
+  "questions": [
+    {
+      "question": "O que os verbos indicam em uma frase?",
+      "options": ["Ação, estado ou fenômeno", "Cor e tamanho", "Lugar e tempo", "Nome e cor"],
+      "answerIndex": 0,
+      "explanation": "Os verbos indicam ação, estado ou fenômeno da natureza, como correr, ser ou chover."
+    },
+    {
+      "question": "Qual frase está no modo indicativo?",
+      "options": ["Talvez eu estude hoje.", "Eu estudo todos os dias.", "Estude agora!", "Que ele estude muito!"],
+      "answerIndex": 1,
+      "explanation": "O modo indicativo expressa certeza de algo real, como 'Eu estudo todos os dias'."
+    },
+    {
+      "question": "O modo subjuntivo expressa:",
+      "options": ["Desejo ou dúvida", "Certeza", "Ordem", "Ação passada"],
+      "answerIndex": 0,
+      "explanation": "O modo subjuntivo indica dúvida, hipótese ou desejo."
+    },
+    {
+      "question": "Qual modo verbal expressa ordem?",
+      "options": ["Indicativo", "Subjuntivo", "Imperativo", "Infinitivo"],
+      "answerIndex": 2,
+      "explanation": "O modo imperativo é usado para dar ordens, pedidos ou conselhos."
+    },
+    {
+      "question": "Na frase 'Acorde cedo!', o verbo está no modo:",
+      "options": ["Indicativo", "Subjuntivo", "Imperativo", "Infinitivo"],
+      "answerIndex": 2,
+      "explanation": "‘Acorde’ é uma forma de ordem, portanto está no modo imperativo."
+    },
+    {
+      "question": "Qual das frases está no modo subjuntivo?",
+      "options": ["Espero que você venha amanhã.", "Você veio ontem.", "Você vem amanhã.", "Venha agora!"],
+      "answerIndex": 0,
+      "explanation": "O subjuntivo aparece com expressões de desejo, como 'Espero que'."
+    },
+    {
+      "question": "Qual é o tempo verbal de 'viajarei'?",
+      "options": ["Presente", "Pretérito", "Futuro", "Infinitivo"],
+      "answerIndex": 2,
+      "explanation": "‘Viajarei’ indica ação futura."
+    },
+    {
+      "question": "Na frase 'Eu cantei ontem', o verbo está no tempo:",
+      "options": ["Futuro", "Pretérito", "Presente", "Infinitivo"],
+      "answerIndex": 1,
+      "explanation": "‘Cantei’ indica ação no passado, portanto está no pretérito."
+    },
+    {
+      "question": "Qual verbo está no infinitivo?",
+      "options": ["Cantarei", "Cantar", "Cantei", "Canto"],
+      "answerIndex": 1,
+      "explanation": "O infinitivo é a forma básica do verbo, como 'cantar', 'viver', 'partir'."
+    },
+    {
+      "question": "A frase 'Que eu vença o desafio' está no modo:",
+      "options": ["Subjuntivo", "Imperativo", "Indicativo", "Infinitivo"],
+      "answerIndex": 0,
+      "explanation": "O subjuntivo expressa desejo, como em 'Que eu vença'."
+    },
+    {
+      "question": "Qual das frases é uma ordem negativa?",
+      "options": ["Não fale alto!", "Fale baixo.", "Falar alto é errado.", "Ele não fala alto."],
+      "answerIndex": 0,
+      "explanation": "O imperativo negativo usa 'não' antes do verbo: 'Não fale alto!'."
+    },
+    {
+      "question": "Na frase 'Talvez ele viaje amanhã', o verbo expressa:",
+      "options": ["Certeza", "Dúvida", "Ordem", "Passado"],
+      "answerIndex": 1,
+      "explanation": "O uso de 'talvez' indica dúvida, típica do modo subjuntivo."
+    },
+    {
+      "question": "Qual dessas palavras é uma preposição?",
+      "options": ["de", "mesa", "azul", "forte"],
+      "answerIndex": 0,
+      "explanation": "‘De’ é uma preposição, pois liga palavras e indica origem, posse etc."
+    },
+    {
+      "question": "Na frase 'Vou à escola', 'à' indica:",
+      "options": ["Crase (a + a)", "Acento agudo", "Plural", "Verbo"],
+      "answerIndex": 0,
+      "explanation": "‘À’ é a fusão da preposição 'a' com o artigo 'a', chamada crase."
+    },
+    {
+      "question": "Na frase 'O som do mar', 'do' resulta da união de:",
+      "options": ["de + o", "de + a", "em + o", "por + o"],
+      "answerIndex": 0,
+      "explanation": "‘Do’ é formado pela união de 'de' + 'o'."
+    },
+    {
+      "question": "Qual preposição indica companhia?",
+      "options": ["com", "por", "a", "de"],
+      "answerIndex": 0,
+      "explanation": "‘Com’ indica companhia: 'Fui ao parque com meus amigos'."
+    },
+    {
+      "question": "Qual preposição indica destino?",
+      "options": ["a", "de", "por", "em"],
+      "answerIndex": 0,
+      "explanation": "‘A’ indica destino: 'Vou a São Paulo'."
+    },
+    {
+      "question": "Qual frase indica origem?",
+      "options": ["Vim de Manaus.", "Vou a Manaus.", "Cheguei em Manaus.", "Viajo para Manaus."],
+      "answerIndex": 0,
+      "explanation": "‘De’ indica origem: 'Vim de Manaus'."
+    },
+    {
+      "question": "Na frase 'Passei pela ponte', 'pela' é formada por:",
+      "options": ["por + a", "para + a", "de + a", "em + a"],
+      "answerIndex": 0,
+      "explanation": "‘Pela’ resulta da combinação 'por' + 'a'."
+    },
+    {
+      "question": "O que é crase?",
+      "options": ["Fusão de 'a' + 'a'", "Separação de vogais", "Troca de letras", "Verbo irregular"],
+      "answerIndex": 0,
+      "explanation": "Crase é a fusão da preposição 'a' com o artigo 'a', indicada por acento grave (`à`)."
+    },
+    {
+      "question": "Escolha a frase com uso correto da crase:",
+      "options": ["Vou à escola.", "Vou a escola.", "Fui ào médico.", "Cheguei à em casa."],
+      "answerIndex": 0,
+      "explanation": "Usa-se 'à' antes de palavras femininas precedidas de preposição 'a'."
+    },
+    {
+      "question": "Em 'Escrever a lápis', o 'a' indica:",
+      "options": ["Instrumento", "Destino", "Companhia", "Origem"],
+      "answerIndex": 0,
+      "explanation": "‘A’ indica instrumento: 'a lápis', 'a tinta'."
+    },
+    {
+      "question": "Qual preposição completa: Saiu ___ janela?",
+      "options": ["por", "a", "em", "de"],
+      "answerIndex": 0,
+      "explanation": "‘Por’ indica passagem: 'Saiu por uma janela'."
+    },
+    {
+      "question": "Qual opção mostra um substantivo formado de um adjetivo?",
+      "options": ["O belo da arte", "O menino bonito", "Belo quadro", "O artista é belo"],
+      "answerIndex": 0,
+      "explanation": "‘O belo’ vem do adjetivo 'belo' acompanhado de artigo, virando substantivo."
+    },
+    {
+      "question": "Qual mostra um substantivo formado de um verbo?",
+      "options": ["O jantar está pronto", "Vou jantar cedo", "Ele jantou ontem", "Comemos o jantar"],
+      "answerIndex": 0,
+      "explanation": "‘O jantar’ é o verbo 'jantar' transformado em substantivo pelo artigo 'o'."
+    },
+    {
+      "question": "O que acontece quando colocamos artigo antes de um adjetivo?",
+      "options": ["Vira substantivo", "Vira verbo", "Perde sentido", "Fica plural"],
+      "answerIndex": 0,
+      "explanation": "O artigo faz o adjetivo ter função de substantivo, como em 'o verde', 'o belo'."
+    },
+    {
+      "question": "Na frase 'O correr faz bem', 'correr' é:",
+      "options": ["Verbo usado como substantivo", "Verbo no presente", "Adjetivo", "Preposição"],
+      "answerIndex": 0,
+      "explanation": "‘O correr’ é verbo com artigo, usado como substantivo."
+    },
+    {
+      "question": "Qual frase é uma comparação?",
+      "options": ["É leve como uma pluma.", "Ele é leve.", "Ela é bonita.", "Ele é rápido."],
+      "answerIndex": 0,
+      "explanation": "A palavra 'como' cria a comparação: 'leve como uma pluma'."
+    },
+    {
+      "question": "Um texto técnico serve para:",
+      "options": ["Ensinar a realizar procedimentos", "Contar histórias", "Expressar sentimentos", "Fazer humor"],
+      "answerIndex": 0,
+      "explanation": "Textos técnicos explicam procedimentos de forma clara e objetiva."
+    },
+    {
+      "question": "Qual frase é interrogativa direta?",
+      "options": ["Por que você não veio?", "Quero saber por que você não veio.", "Você deveria ter vindo.", "Você virá amanhã."],
+      "answerIndex": 0,
+      "explanation": "Frases com ponto de interrogação são interrogativas diretas."
+    },
+    {
+      "question": "Qual frase é interrogativa indireta?",
+      "options": ["Quero saber por que você não veio.", "Por que você não veio?", "Você veio?", "Vem amanhã!"],
+      "answerIndex": 0,
+      "explanation": "A pergunta é feita indiretamente dentro de outra oração."
+    },
+    {
+      "question": "Qual frase é injuntiva?",
+      "options": ["Feche a janela, por favor.", "Você fechou a janela?", "A janela está aberta.", "Como está frio!"],
+      "answerIndex": 0,
+      "explanation": "Frases injuntivas expressam ordens ou instruções."
+    },
+    {
+      "question": "Qual é o modo do verbo em 'Faça seu dever!'?",
+      "options": ["Imperativo", "Subjuntivo", "Indicativo", "Infinitivo"],
+      "answerIndex": 0,
+      "explanation": "‘Faça’ indica ordem, típica do modo imperativo."
+    },
+    {
+      "question": "Na frase 'Talvez ele estude amanhã', o verbo indica:",
+      "options": ["Dúvida", "Certeza", "Ordem", "Ação passada"],
+      "answerIndex": 0,
+      "explanation": "‘Talvez’ indica dúvida, característica do modo subjuntivo."
+    },
+    {
+      "question": "O que indica o modo indicativo?",
+      "options": ["Certeza", "Dúvida", "Desejo", "Ordem"],
+      "answerIndex": 0,
+      "explanation": "O modo indicativo expressa fatos certos e reais."
+    },
+    {
+      "question": "Qual destas frases está no imperativo negativo?",
+      "options": ["Não fale durante a aula.", "Fale agora!", "Ele fala sempre.", "Vamos falar mais tarde."],
+      "answerIndex": 0,
+      "explanation": "‘Não fale’ é um exemplo de imperativo negativo."
+    },
+    {
+      "question": "Qual das palavras é uma preposição?",
+      "options": ["entre", "rápido", "sol", "feliz"],
+      "answerIndex": 0,
+      "explanation": "‘Entre’ é preposição, pois liga termos da frase."
+    },
+    {
+      "question": "Na frase 'Brincar com amigos é divertido', 'com' indica:",
+      "options": ["Companhia", "Instrumento", "Lugar", "Tempo"],
+      "answerIndex": 0,
+      "explanation": "‘Com’ indica companhia: brincar com amigos."
+    },
+    {
+      "question": "Complete: Andou ___ corredor.",
+      "options": ["pelo", "no", "da", "com"],
+      "answerIndex": 0,
+      "explanation": "‘Pelo’ é formado de 'por' + 'o', indicando lugar por onde se anda."
+    },
+    {
+      "question": "A palavra 'àquela' vem da junção de:",
+      "options": ["a + aquela", "a + aquela + crase", "a + a", "de + aquela"],
+      "answerIndex": 0,
+      "explanation": "‘Àquela’ é a fusão da preposição 'a' com o pronome demonstrativo 'aquela'."
+    },
+    {
+      "question": "Na frase 'Estamos na classe', 'na' resulta de:",
+      "options": ["em + a", "a + a", "de + a", "por + a"],
+      "answerIndex": 0,
+      "explanation": "‘Na’ vem de 'em' + 'a'."
+    },
+    {
+      "question": "Qual das opções mostra uma preposição de lugar?",
+      "options": ["em", "por", "para", "de"],
+      "answerIndex": 0,
+      "explanation": "‘Em’ indica lugar: 'em casa', 'em São Paulo'."
+    },
+    {
+      "question": "O que preposições fazem em uma frase?",
+      "options": ["Ligam palavras e completam o sentido", "Dão cor às palavras", "Substituem substantivos", "Indicam plural"],
+      "answerIndex": 0,
+      "explanation": "Preposições ligam palavras e ajudam a formar sentido completo."
+    },
+    {
+      "question": "Qual frase mostra preposição com artigo?",
+      "options": ["Fui ao médico.", "Cheguei de tarde.", "Brinquei com ela.", "Corri por medo."],
+      "answerIndex": 0,
+      "explanation": "‘Ao’ é formado por 'a' + 'o', união de preposição e artigo."
+    }
+  ]
+}
