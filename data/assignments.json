@@ -1,4 +1,12 @@
 [
+{
+  "id": "matematica-4ano-geometria-e-numeros-decimais",
+  "title": "Matemática",
+  "subtitle": "Figuras geométricas, simetria, temperatura e números decimais",
+  "badge": "4º ano",
+  "summary": "Conteúdos abordados: figuras geométricas planas e espaciais (prismas e pirâmides), simetria de reflexão e eixo de simetria, leitura e interpretação de gráficos de colunas duplas, temperatura e escalas em graus Celsius, adição e subtração com números decimais, sistema monetário brasileiro, cálculos com desconto e princípio aditivo da igualdade.",
+  "questionsFile": "data/matematica-4ano.json"
+},
   {
     "id": "historia-brasil-4ano",
     "title": "História do Brasil",
