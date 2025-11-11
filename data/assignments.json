@@ -8,11 +8,11 @@
     "questionsFile": "data/historia-4ano.json"
   },
   {
-  "id": "lingua-portuguesa-4ano-modoverbal",
-  "title": "Língua Portuguesa",
-  "subtitle": "Verbos, Preposições e Formação de Palavras",
-  "badge": "4º ano",
-  "summary": "Estudo dos modos verbais (indicativo, subjuntivo e imperativo), preposições e suas combinações, formação de substantivos a partir de adjetivos e verbos, frases interrogativas e injuntivas, além da estrutura de textos técnicos e comparações para explicar ideias.",
-  "questionsFile": "data/portugues-4ano.json"
-}
+    "id": "lingua-portuguesa-4ano-modoverbal",
+    "title": "Língua Portuguesa",
+    "subtitle": "Verbos, Preposições e Formação de Palavras",
+    "badge": "4º ano",
+    "summary": "Estudo dos modos verbais (indicativo, subjuntivo e imperativo), preposições e suas combinações, formação de substantivos a partir de adjetivos e verbos, frases interrogativas e injuntivas, além da estrutura de textos técnicos e comparações para explicar ideias.",
+    "questionsFile": "data/lingua-portuguesa-4ano.json"
+  }
 ]
