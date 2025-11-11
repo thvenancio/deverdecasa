@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>História do Brasil – Quiz estilo Duolingo</title>
+<style>
+  :root{
+    --bg:#0f172a;          /* slate-900 */
+    --card:#111827;        /* gray-900 */
+    --muted:#94a3b8;       /* slate-400 */
+    --text:#e5e7eb;        /* gray-200 */
+    --brand:#22c55e;       /* green-500 */
+    --brand-2:#06b6d4;     /* cyan-500 */
+    --wrong:#ef4444;       /* red-500 */
+    --right:#22c55e;       /* green-500 */
+    --warn:#f59e0b;        /* amber-500 */
+    --shadow: 0 20px 50px rgba(0,0,0,.35);
+    --radius: 18px;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;background: radial-gradient(1200px 800px at 50% -10%, #1f2a44 0%, #0b1224 50%, var(--bg) 100%);
+    font-family: ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial;
+    color:var(--text); display:grid; place-items:center; padding:18px;
+  }
+  .app{
+    width:min(820px,100%); max-width:100%;
+  }
+  .card{
+    background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:var(--radius); box-shadow:var(--shadow);
+    overflow:hidden;
+  }
+  header{
+    padding:18px 20px; display:flex; gap:12px; align-items:center; justify-content:space-between;
+    background:linear-gradient(90deg, rgba(34,197,94,.12), rgba(6,182,212,.12));
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .title{
+    font-weight:800; letter-spacing:.3px; display:flex; gap:10px; align-items:center;
+  }
+  .badge{
+    background:rgba(6,182,212,.15); color:#a7f3d0; padding:4px 10px; border-radius:999px; font-weight:700; font-size:.75rem;
+  }
+  .progress{
+    width:42%; height:10px; background:rgba(255,255,255,.08); border-radius:999px; overflow:hidden;
+  }
+  .progress>div{height:100%; width:0%; background:linear-gradient(90deg, var(--brand), var(--brand-2)); transition:width .35s ease;}
+  main{padding:20px; display:grid; gap:16px;}
+  .question{
+    font-size:1.25rem; line-height:1.45; font-weight:700;
+    background:rgba(255,255,255,.04); padding:16px; border-radius:14px; border:1px solid rgba(255,255,255,.06);
+  }
+  .options{display:grid; gap:12px;}
+  .btn{
+    width:100%; text-align:left; padding:14px 16px; border-radius:14px; border:1px solid rgba(255,255,255,.08);
+    background:rgba(255,255,255,.03); color:var(--text); cursor:pointer; font-weight:600; transition:.2s transform, .2s background, .2s border;
+  }
+  .btn:hover{transform:translateY(-1px); background:rgba(255,255,255,.06)}
+  .btn[disabled]{opacity:.8; cursor:not-allowed; transform:none}
+  .btn.correct{border-color: rgba(34,197,94,.7); background:rgba(34,197,94,.12)}
+  .btn.wrong{border-color: rgba(239,68,68,.7); background:rgba(239,68,68,.12)}
+  .feedback{
+    padding:14px 16px; border-radius:14px; display:none; gap:8px; border:1px dashed rgba(255,255,255,.15);
+  }
+  .feedback.show{display:flex}
+  .feedback.ok{background:rgba(34,197,94,.12); border-color:rgba(34,197,94,.35)}
+  .feedback.no{background:rgba(239,68,68,.12); border-color:rgba(239,68,68,.35)}
+  .actions{display:flex; gap:10px; justify-content:flex-end}
+  .primary{
+    padding:12px 16px; border-radius:12px; border:0; color:#062a23; background:linear-gradient(90deg, var(--brand), var(--brand-2)); font-weight:800; cursor:pointer;
+  }
+  .primary:disabled{opacity:.6; cursor:not-allowed}
+  .muted{color:var(--muted); font-size:.95rem}
+  footer{
+    padding:12px 20px; display:flex; align-items:center; justify-content:space-between; color:var(--muted);
+    border-top:1px solid rgba(255,255,255,.08); background:rgba(255,255,255,.02)
+  }
+  .pill{padding:6px 10px; border-radius:999px; border:1px solid rgba(255,255,255,.15); color:#a5b4fc; font-weight:700; font-size:.8rem}
+  .end h2{margin:0 0 8px 0}
+  .grid-2{display:grid; gap:10px; grid-template-columns:repeat(2,minmax(0,1fr))}
+  @media (max-width:640px){
+    header{flex-direction:column; align-items:flex-start; gap:10px}
+    .progress{width:100%}
+    .grid-2{grid-template-columns:1fr}
+    .question{font-size:1.1rem}
+  }
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="card">
+    <header>
+      <div class="title">🇧🇷 Quiz • História do Brasil <span class="badge">4º ano</span></div>
+      <div class="progress" aria-label="progresso"><div id="bar"></div></div>
+      <div class="pill" id="scorePill">0 acertos</div>
+    </header>
+
+    <main>
+      <div id="qwrap">
+        <div class="question" id="question">Carregando…</div>
+        <div class="options" id="options"></div>
+
+        <div id="feedback" class="feedback" role="alert"></div>
+        <div class="actions">
+          <button id="nextBtn" class="primary" disabled>Próxima ▶</button>
+        </div>
+        <div class="muted" id="counter"></div>
+      </div>
+
+      <div id="end" class="end" style="display:none">
+        <h2>🎉 Parabéns!</h2>
+        <p id="finalText"></p>
+        <div class="grid-2">
+          <button class="primary" onclick="restart()">Refazer o quiz</button>
+          <button class="primary" onclick="share()">Compartilhar resultado</button>
+        </div>
+        <p class="muted" style="margin-top:10px">Dica: refaça e tente melhorar sua pontuação!</p>
+      </div>
+    </main>
+
+    <footer>
+      <div>Conteúdo: engenhos, Brasil Holandês, bandeirantes, gado, ciclo do ouro, Conjuração, Revolução Francesa e Napoleão.</div>
+      <div class="pill" id="progressPill">1 / 60</div>
+    </footer>
+  </div>
+</div>
+
+<script>
+/* =========================
+   Banco de Questões (60)
+   Cada item: {q, options:[], answer:index, exp:""}
+   ========================= */
+const QUESTIONS = [
+  // 1-15 Cana/Engenhos
+  {q:"A cana-de-açúcar tem origem em qual região do mundo?", options:["Nova Guiné (Oceania)","Península Ibérica","África do Norte","América Central"], answer:0, exp:"A cana surgiu na Nova Guiné e foi difundida para Índia, China, Pérsia e Síria antes de chegar à Europa."},
+  {q:"Quem ensinou os portugueses a cultivar a cana e produzir açúcar?", options:["Povos do Oriente","Espanhóis","Indígenas brasileiros","Vikings"], answer:0, exp:"Os povos do Oriente já dominavam o cultivo; os portugueses aprenderam com eles."},
+  {q:"Como se chamava a propriedade onde se plantava cana e produzia açúcar?", options:["Engenho de açúcar","Fazenda de mandioca","Sesmeiro","Capitania"], answer:0, exp:"Engenho é o conjunto produtivo: canaviais, moendas, casas e pessoas."},
+  {q:"O primeiro engenho do Brasil foi instalado em:", options:["São Vicente (SP)","Salvador (BA)","Recife (PE)","Rio de Janeiro (RJ)"], answer:0, exp:"Martim Afonso de Sousa instalou o primeiro engenho na capitania de São Vicente."},
+  {q:"As capitanias que mais se destacaram na produção de açúcar foram:", options:["Pernambuco e Bahia","Santa Catarina e Paraná","Acre e Amapá","Goiás e Tocantins"], answer:0, exp:"Pernambuco e Bahia se destacaram em qualidade e quantidade."},
+  {q:"Por que muitos donatários pediam empréstimos a comerciantes holandeses?", options:["Porque montar um engenho custava caro","Porque o açúcar não tinha valor","Porque era proibido plantar cana","Porque não havia mão de obra"], answer:0, exp:"A estrutura era caríssima; os holandeses financiavam e comercializavam o açúcar na Europa."},
+  {q:"O território do Brasil foi dividido em grandes áreas entregues a donatários. Como se chamavam?", options:["Capitanias hereditárias","Províncias Unidas","Capitais","Estados"], answer:0, exp:"As capitanias eram administradas pelos donatários."},
+  {q:"Qual condição natural NÃO favorecia o cultivo da cana no Brasil?", options:["Clima frio de montanha","Solos férteis","Regime de chuvas","Grande extensão territorial"], answer:0, exp:"Clima frio de montanha não favorece a cana; o Brasil tinha clima e solos favoráveis."},
+  {q:"O açúcar era tão valioso que podia ser:", options:["Presente entre reis e herança","Usado como moeda somente no Brasil","Proibido em Portugal","Descartado nos navios"], answer:0, exp:"Fontes registram o açúcar como presente e até herança."},
+  {q:"Quem instalou o primeiro engenho no Brasil?", options:["Martim Afonso de Sousa","Maurício de Nassau","Tiradentes","Dom Sebastião"], answer:0, exp:"Martim Afonso foi o responsável em São Vicente."},
+  {q:"Engenho de açúcar envolve:", options:["Terra, instalações, trabalhadores e moendas","Apenas o canavial","Somente a casa-grande","Apenas comércio com a Europa"], answer:0, exp:"É um complexo produtivo completo."},
+  {q:"Os portugueses iniciaram o cultivo de cana em ilhas do Atlântico, como:", options:["Madeira, Açores e Cabo Verde","Ilhas Galápagos","Bermudas","Havaí"], answer:0, exp:"Essas ilhas foram etapas antes do Brasil."},
+  {q:"Para defender a posse do território e gerar riqueza, os portugueses apostaram na:", options:["Produção de açúcar","Extração de sal","Plantação de trigo","Pecuária apenas"], answer:0, exp:"O açúcar virou a grande aposta até o ciclo do ouro."},
+  {q:"Qual era a função dos engenhos próximos aos portos?", options:["Facilitar o escoamento do açúcar para a Europa","Evitar contato com rios","Esconder a produção","Produzir apenas para consumo local"], answer:0, exp:"Proximidade reduzia custo e tempo de transporte."},
+  {q:"Quem eram os principais financiadores e comerciantes do açúcar na Europa por muito tempo?", options:["Holandeses","Italianos","Chineses","Suecos"], answer:0, exp:"Holandeses financiaram e distribuíram o açúcar."},
+
+  // 16-30 União Ibérica / Brasil Holandês / Nassau
+  {q:"A União Ibérica uniu quais reinos sob o mesmo rei?", options:["Portugal e Espanha","Holanda e Inglaterra","França e Itália","Portugal e Inglaterra"], answer:0, exp:"Filipe II, rei da Espanha, tornou-se também rei de Portugal (1580–1640)."},
+  {q:"A União Ibérica começou após a morte de:", options:["Dom Sebastião e depois Dom Henrique","Dom Pedro I","Tiradentes","Maurício de Nassau"], answer:0, exp:"Ambos morreram sem herdeiros, abrindo disputa pelo trono."},
+  {q:"As províncias que se rebelaram e formaram as Províncias Unidas eram:", options:["Países Baixos (Holanda)","Itália","Rússia","Suíça"], answer:0, exp:"Região dos atuais Países Baixos, com a Holanda em destaque."},
+  {q:"Por que a Holanda invadiu o Brasil no século XVII?", options:["Para controlar o lucrativo negócio do açúcar","Para evangelizar povos indígenas","Para procurar ouro em Minas","Para fugir do frio europeu"], answer:0, exp:"O açúcar era o grande negócio; a Holanda tinha sido impedida de comerciar."},
+  {q:"Em 1624, os holandeses invadiram primeiro:", options:["Salvador (BA)","São Vicente (SP)","Rio de Janeiro (RJ)","Belém (PA)"], answer:0, exp:"A esquadra atacou Salvador, mas foi repelida depois."},
+  {q:"Em 1630, conquistaram a região mais próspera do Brasil:", options:["Pernambuco","Amazonas","Goiás","Paraná"], answer:0, exp:"A partir de 1630 consolidaram o chamado 'Brasil Holandês'."},
+  {q:"A empresa que organizou a invasão foi a:", options:["Companhia das Índias Ocidentais","Companhia de Jesus","Companhia do Comércio do Sul","Companhia do Mate"], answer:0, exp:"Era uma grande companhia mercantil e militar holandesa."},
+  {q:"Quem administrou o Brasil Holandês e modernizou Recife?", options:["Maurício de Nassau","Martim Afonso","Dom João VI","Pombal"], answer:0, exp:"Nassau trouxe obras, cientistas e artistas."},
+  {q:"Obra marcante do período de Nassau:", options:["Palácio de Friburgo","Teatro Amazonas","Palácio de São Cristóvão","Palácio da Alvorada"], answer:0, exp:"Residência oficial de Nassau em Recife."},
+  {q:"Qual cidade virou capital do Brasil Holandês?", options:["Recife","Olinda","Salvador","Natal"], answer:0, exp:"Recife foi estruturada e elevou-se com canais, pontes e diques."},
+  {q:"Nassau também criou em Recife:", options:["Jardim botânico, zoológico e observatório","Minas de carvão","Fábricas de automóveis","Universidade de Coimbra"], answer:0, exp:"Mostra o apreço dele pelas ciências."},
+  {q:"O termo 'Brasil Holandês' refere-se:", options:["À parte do Nordeste sob domínio holandês (1630–1654)","A todo o Brasil sob a Holanda","À Amazônia colonizada por holandeses no século XIX","Ao período republicano"], answer:0, exp:"Especialmente Pernambuco e áreas vizinhas."},
+  {q:"Após 1637, grande parte do litoral nordestino estava:", options:["Sob domínio da Holanda","Sob domínio francês","Despovoado","Independente"], answer:0, exp:"Os holandeses expandiram após conquistar Pernambuco."},
+  {q:"Os reforços que impediram o sucesso da invasão de 1624 foram enviados por:", options:["Coroa Ibérica","França","Inglaterra","Veneza"], answer:0, exp:"Portugal e Espanha estavam unidos (Coroa Ibérica)."},
+  {q:"Os holandeses atuavam no Brasil principalmente como:", options:["Comerciantes e financiadores do açúcar","Exploradores de petróleo","Caçadores de baleia","Fabricantes de armas"], answer:0, exp:"Controlavam crédito e distribuição do açúcar na Europa."},
+
+  // 31-45 Caminhos do Brasil: gado e bandeirantes
+  {q:"Por muito tempo a ocupação do Brasil ocorreu principalmente:", options:["Perto do litoral","No interior amazônico","No extremo sul","No centro-oeste"], answer:0, exp:"Engenhos e portos estavam no litoral, facilitando o escoamento."},
+  {q:"A criação de gado avançou para:", options:["O interior do território","Apenas o litoral","Ilhas oceânicas","Apenas cidades"], answer:0, exp:"Havia pouco espaço nos engenhos; o gado foi para o interior."},
+  {q:"Os bovinos chegaram ao Brasil vindos de:", options:["Cabo Verde","Índia","México","Japão"], answer:0, exp:"Os primeiros bois vieram de Cabo Verde."},
+  {q:"Além de alimento, o gado servia para:", options:["Transporte e força nas moendas","Produzir açúcar","Navegar barcos","Fazer pólvora"], answer:0, exp:"Bovinos moviam rodas d’água e transportavam cargas/pessoas."},
+  {q:"Quem conduzia o gado por longas distâncias eram os:", options:["Tropeiros","Bandeirantes","Sesmeiros","Corsários"], answer:0, exp:"Tropeiros abasteciam várias regiões e fundaram cidades."},
+  {q:"Cidades ligadas às rotas de tropeiros incluem:", options:["Vacaria, Lages, Castro e Sorocaba","Manaus, Belém, Macapá","Porto Seguro, Ilhéus, Aracaju","Fortaleza, Teresina, São Luís"], answer:0, exp:"Surgiram em pontos de parada e comércio do gado."},
+  {q:"Os habitantes de São Vicente que faziam expedições ao interior eram chamados:", options:["Paulistas / Bandeirantes","Gaúchos","Garimpeiros","Bucaneiros"], answer:0, exp:"Paulistas organizavam as 'bandeiras'."},
+  {q:"As 'bandeiras' usavam muito os rios, como:", options:["Tietê e afluentes","São Francisco e Tocantins apenas","Amazonas apenas","Paraná apenas"], answer:0, exp:"Rios facilitavam a entrada para o interior."},
+  {q:"A composição típica das bandeiras incluía:", options:["Europeus, indígenas e seus descendentes","Somente portugueses nobres","Apenas militares espanhóis","Missionários franceses"], answer:0, exp:"Era um grupo misto, com diferentes origens."},
+  {q:"As bandeiras contribuíram para:", options:["Ampliar o território além de Tordesilhas","Dividir o Brasil entre França e Inglaterra","Encerrar a produção de açúcar","Proibir a criação de gado"], answer:0, exp:"Exploraram áreas a oeste, ignorando Tordesilhas."},
+  {q:"Tratado que dividia as terras entre Portugal e Espanha em 1494:", options:["Tratado de Tordesilhas","Tratado de Versalhes","Tratado de Petrópolis","Tratado de Madrid (1750)"], answer:0, exp:"As bandeiras frequentemente ignoraram seus limites."},
+  {q:"Objetivo principal das primeiras bandeiras paulistas:", options:["Encontrar metais preciosos","Dominar o comércio de escravos africanos no Atlântico","Cultivar café","Fundar universidades"], answer:0, exp:"Buscavam ouro e pedras; só depois acharam grandes jazidas."},
+  {q:"O 'Monumento às Bandeiras', em SP, foi criado por:", options:["Victor Brecheret","Aleijadinho","Debret","Tarsila do Amaral"], answer:0, exp:"Escultura icônica em frente ao Ibirapuera."},
+  {q:"A descoberta de ouro em grande escala aconteceu:", options:["Após cerca de um século de expedições","Na chegada de Cabral","No período do Brasil Holandês","Apenas no Império"], answer:0, exp:"Depois de longa busca, no fim do séc. XVII."},
+
+  // 46-60 Ciclo do ouro, Conjuração, Revolução Francesa, Napoleão
+  {q:"A principal nova riqueza do Brasil no fim do séc. XVII foi:", options:["Ouro","Café","Borracha","Algodão"], answer:0, exp:"O ciclo do ouro substituiu o auge do açúcar."},
+  {q:"O principal imposto nas regiões mineradoras era o:", options:["Quinto (20% do ouro)","Dízimo (10%)","Capitação (50%)","Sisa (2%)"], answer:0, exp:"O quinto recolhia 1/5 de todo o ouro encontrado."},
+  {q:"Para controlar a mineração, a Coroa portuguesa:", options:["Criou postos e enviou ouvidores","Aboliu os impostos","Mudou a capital para Salvador","Proibiu o uso de estradas"], answer:0, exp:"Ouvidores cobravam e vigiavam entrada/saída de ouro."},
+  {q:"A capital foi transferida de Salvador para o Rio de Janeiro porque:", options:["Ficava mais perto das minas","Tinha praias mais bonitas","Era mais antiga","Era sede da Igreja"], answer:0, exp:"Logística e fiscalização do ouro."},
+  {q:"Quando o ouro diminuiu e as metas não eram atingidas, poderia ocorrer:", options:["Confisco de bens (derrama)","Anistia total","Redução automática de impostos","Mudança para Lisboa"], answer:0, exp:"A derrama permitia confiscar bens para cumprir a meta."},
+  {q:"Movimento que buscou a independência de Minas inspirado nos EUA:", options:["Conjuração Mineira","Revolução Praieira","Sabinada","Balaiada"], answer:0, exp:"Planejou proclamar a independência em Vila Rica."},
+  {q:"Líder mais lembrado da Conjuração Mineira:", options:["Tiradentes","Dom Pedro I","José Bonifácio","Maurício de Nassau"], answer:0, exp:"Joaquim José da Silva Xavier, o Tiradentes."},
+  {q:"Quem traiu o grupo em troca de perdão de dívidas?", options:["Joaquim Silvério dos Reis","Dom João VI","Pombal","Bonifácio"], answer:0, exp:"A delação levou às prisões; Tiradentes foi executado."},
+  {q:"A Revolução Francesa começou em:", options:["1789","1808","1500","1654"], answer:0, exp:"Derrubou a monarquia absolutista na França."},
+  {q:"Um ideal associado à Revolução Francesa:", options:["Liberdade, igualdade e fraternidade","Colonialismo sem impostos","Monarquia absoluta","Feudalismo"], answer:0, exp:"Inspirou muitos movimentos nas Américas."},
+  {q:"Quem se destacou como general e depois imperador da França?", options:["Napoleão Bonaparte","Luís XIV","Robespierre","Henrique VIII"], answer:0, exp:"Napoleão expandiu o domínio francês pela Europa."},
+  {q:"Grande obstáculo aos planos de Napoleão na Europa:", options:["Inglaterra","Portugal","Suécia","Sardenha"], answer:0, exp:"A Inglaterra resistia e liderava coalizões contra a França."},
+  {q:"Napoleão ameaçou invadir países que:", options:["Comerciassem com a Inglaterra","Exportassem café","Usassem ouro brasileiro","Falassem português"], answer:0, exp:"Bloqueio Continental visava isolar os ingleses."},
+  {q:"Portugal recusou romper com a Inglaterra; consequência:", options:["Fuga da corte portuguesa para o Brasil (1807)","Independência imediata do Brasil","Domínio holandês em Pernambuco","Fim dos engenhos"], answer:0, exp:"A corte transferiu-se para o Rio, mudando o status do Brasil."},
+];
+
+/* ====== Estado e UI ====== */
+let index = 0;
+let score = 0;
+let locked = false;
+
+const bar = document.getElementById('bar');
+const qEl = document.getElementById('question');
+const optEl = document.getElementById('options');
+const feed = document.getElementById('feedback');
+const counter = document.getElementById('counter');
+const nextBtn = document.getElementById('nextBtn');
+const scorePill = document.getElementById('scorePill');
+const progressPill = document.getElementById('progressPill');
+const endView = document.getElementById('end');
+const qwrap = document.getElementById('qwrap');
+const finalText = document.getElementById('finalText');
+
+function shuffle(arr){ return arr.map(v=>[Math.random(),v]).sort((a,b)=>a[0]-b[0]).map(v=>v[1]); }
+
+function render(){
+  locked = false;
+  nextBtn.disabled = true;
+  feed.className = 'feedback'; feed.innerHTML = '';
+  const total = QUESTIONS.length;
+  const q = QUESTIONS[index];
+
+  qEl.textContent = q.q;
+  optEl.innerHTML = '';
+  // Render options; keep order (4 opções) para crianças se localizarem, mas pode embaralhar se quiser:
+  q.options.forEach((txt, i)=>{
+    const b = document.createElement('button');
+    b.className = 'btn';
+    b.textContent = txt;
+    b.onclick = ()=>select(i);
+    optEl.appendChild(b);
+  });
+
+  progressPill.textContent = `${index+1} / ${total}`;
+  bar.style.width = `${((index)/total)*100}%`;
+  counter.textContent = `Questão ${index+1} de ${total}`;
+  scorePill.textContent = `${score} acerto${score===1?'':'s'}`;
+}
+
+function select(chosen){
+  if(locked) return;
+  locked = true;
+  const q = QUESTIONS[index];
+  const buttons = [...optEl.querySelectorAll('.btn')];
+  buttons.forEach((b,i)=>{
+    b.disabled = true;
+    if(i === q.answer) b.classList.add('correct');
+    if(i === chosen && i !== q.answer) b.classList.add('wrong');
+  });
+
+  const rightText = q.options[q.answer];
+  if(chosen === q.answer){
+    score++;
+    scorePill.textContent = `${score} acerto${score===1?'':'s'}`;
+    feed.className = 'feedback ok show';
+    feed.innerHTML = `✅ <div><strong>Mandou muito!</strong> Resposta certa.<br><span class="muted">${q.exp}</span></div>`;
+  }else{
+    feed.className = 'feedback no show';
+    feed.innerHTML = `❌ <div><strong>Quase lá!</strong> A correta é: <em>${rightText}</em>.<br><span class="muted">${q.exp}</span></div>`;
+  }
+  nextBtn.disabled = false;
+}
+
+nextBtn.addEventListener('click', ()=>{
+  if(index < QUESTIONS.length-1){
+    index++;
+    render();
+  }else{
+    finish();
+  }
+});
+
+function finish(){
+  // barra 100%
+  bar.style.width = '100%';
+  qwrap.style.display = 'none';
+  endView.style.display = 'block';
+  const total = QUESTIONS.length;
+  const pct = Math.round((score/total)*100);
+  let msg = 'Show!';
+  if(pct >= 90) msg = 'Excelente! Você é fera em História! 🏆';
+  else if(pct >= 70) msg = 'Muito bom! Continue estudando. 💪';
+  else if(pct >= 50) msg = 'Bom começo! Que tal tentar mais uma vez? 🙂';
+  else msg = 'Tudo bem errar! Vamos treinar e melhorar. 🚀';
+  finalText.textContent = `${msg} Você acertou ${score} de ${total} (${pct}%).`;
+}
+
+function restart(){
+  index = 0; score = 0; qwrap.style.display='block'; endView.style.display='none'; render();
+}
+
+function share(){
+  const total = QUESTIONS.length;
+  const pct = Math.round((score/total)*100);
+  const text = `Fiz o Quiz de História do Brasil (4º ano) e acertei ${score}/${total} (${pct}%)! 🇧🇷`;
+  if(navigator.share){
+    navigator.share({title:'Meu resultado no Quiz', text});
+  }else{
+    navigator.clipboard.writeText(text);
+    alert('Resultado copiado! Cole onde quiser.');
+  }
+}
+
+// inicializa
+render();
+</script>
+</body>
+</html>
