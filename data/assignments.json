@@ -1,0 +1,10 @@
+[
+  {
+    "id": "historia-brasil-4ano",
+    "title": "História do Brasil",
+    "subtitle": "Brasil colonial e transformações do século XVIII",
+    "badge": "4º ano",
+    "summary": "Engenhos, Brasil Holandês, bandeirantes, ciclo do ouro, Conjuração Mineira, Revolução Francesa e Napoleão.",
+    "questionsFile": "data/historia-4ano.json"
+  }
+]
